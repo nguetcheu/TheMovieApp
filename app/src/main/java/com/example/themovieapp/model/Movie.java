@@ -1,10 +1,11 @@
 package com.example.themovieapp.model;
 
-import java.util.List;
+import androidx.databinding.BaseObservable;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Movie {
+public class Movie extends BaseObservable {
 
     @SerializedName("id")
     @Expose
