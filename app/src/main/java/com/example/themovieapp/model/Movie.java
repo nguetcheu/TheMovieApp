@@ -44,7 +44,7 @@ public class Movie extends BaseObservable {
     public void setOverview(String overview) {
         this.overview = overview;
     }
-    
+
     public String getPosterPath() {
         return posterPath;
     }
