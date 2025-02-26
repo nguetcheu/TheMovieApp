@@ -1,7 +1,9 @@
 package com.example.themovieapp.model;
 
 import androidx.databinding.BaseObservable;
+import androidx.databinding.Bindable;
 
+import com.example.themovieapp.BR;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -42,8 +44,7 @@ public class Movie extends BaseObservable {
     public void setOverview(String overview) {
         this.overview = overview;
     }
-
-
+    
     public String getPosterPath() {
         return posterPath;
     }
@@ -60,20 +61,23 @@ public class Movie extends BaseObservable {
         this.releaseDate = releaseDate;
     }
 
+    @Bindable
     public String getTitle() {
         return title;
     }
 
     public void setTitle(String title) {
         this.title = title;
+        notifyPropertyChanged(BR.title);
     }
 
-
+    @Bindable
     public Double getVoteAverage() {
         return voteAverage;
     }
 
     public void setVoteAverage(Double voteAverage) {
         this.voteAverage = voteAverage;
+        notifyPropertyChanged(BR.voteAverage);
     }
 }
